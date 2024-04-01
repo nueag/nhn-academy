@@ -1,0 +1,38 @@
+#!/bin/bash
+
+API_ENDPOINT="http://localhost:8080/external-api"
+
+# GET 요청 보내기
+curl $API_ENDPOINT/accounts
+
+###
+
+#조회 2
+
+API_ENDPOINT="http://localhost:8080/external-api"
+
+# GET 요청 보내기
+curl $API_ENDPOINT/accounts/1
+
+###
+
+#!/bin/bash
+
+API_ENDPOINT="http://localhost:8080/external-api"
+
+echo '{
+  "id": "200",
+  "name": "John Doe",
+  "balance": 100
+}' > request_data.json
+
+curl -X POST -H "Content-Type: application/json" -d @request_data.json $API_ENDPOINT/accounts
+
+###
+
+#!/bin/bash
+
+API_ENDPOINT="http://localhost:8080/external-api"
+
+# DELETE 요청 보내기
+curl -X DELETE $API_ENDPOINT/accounts/200

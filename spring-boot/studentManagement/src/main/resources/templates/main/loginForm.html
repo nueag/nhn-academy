@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <title th:text="#{login.message}"></title>
+</head>
+<body>
+<form method="post" action="/login">
+    <div th:text="#{greeting.message}"></div>
+    <label th:text="#{loginForm.id}"></label>
+    <input type="text" th:name="id" /><br />
+    <label th:text="#{loginForm.pwd}"></label>
+    <input type="password" th:name="pwd" /><br />
+
+    <a th:href="@{'?locale=ko'}"><span >한국어</span></a><br />
+    <a th:href="@{'?locale=en'}"><span >English</span></a><br />
+
+    <br />
+    <input type="submit" />
+</form>
+</body>
+</html>

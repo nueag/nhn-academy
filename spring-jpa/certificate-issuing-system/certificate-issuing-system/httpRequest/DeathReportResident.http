@@ -1,0 +1,32 @@
+POST http://localhost:8080/residents/123/death HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "reportResidentSerialNumber": 5,
+  "birthDeathReportDate": "2024-01-01",
+  "birthReportQualificationsCode": "123",
+  "deathReportQualificationsCode": "456",
+  "emailAddress": "example@example.com",
+  "phoneNumber": "123456789",
+  "birthDeathTypeCode": "사망"
+}
+###
+
+PUT http://localhost:8080/residents/5/death/123 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "reportResidentSerialNumber": 5,
+  "birthDeathReportDate": "2024-02-01",
+  "birthReportQualificationsCode": "789",
+  "deathReportQualificationsCode": "012",
+  "emailAddress": "updated@example.com",
+  "phoneNumber": "987654321",
+  "birthDeathTypeCode": "사망"
+}
+
+###
+DELETE http://localhost:8080/residents/5/death/123 HTTP/1.1
+Host: localhost:8080

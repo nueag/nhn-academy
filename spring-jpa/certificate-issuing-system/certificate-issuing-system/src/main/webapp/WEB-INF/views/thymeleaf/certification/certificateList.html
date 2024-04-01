@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>발급 목록</title>
+</head>
+<body>
+<h2>발급 목록</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>문서 종류</th>
+        <th>발급 여부</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="document : ${documentList}">
+        <td th:text="${document}"></td>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,34 @@
+package com.nhnacademy.edu.domain;
+
+import javax.validation.constraints.AssertTrue;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+import lombok.Value;
+
+@Value
+public class StudentRegisterRequest {
+    @NotBlank(message = "이름은 필수 항목입니다.")
+    @Size(min = 1, message = "이름은 공백을 제거한 후 1글자 이상이어야 합니다.")
+    private String name;
+
+    @NotBlank(message = "이메일은 필수 항목입니다.")
+    @Email(message = "올바른 이메일 형식이어야 합니다.")
+    private String email;
+
+    @Min(value = 0, message = "점수는 0점 이상이어야 합니다.")
+    @Max(value = 100, message = "점수는 100점 이하이어야 합니다.")
+    private int score;
+
+    @NotBlank(message = "평가는 필수 항목입니다.")
+    private String comment;
+
+    @AssertTrue(message = "평가는 공백을 제거한 후 1글자 이상 200글자 이하이어야 합니다.")
+    public boolean isCommentValid() {
+        String changedComment = comment.replace(" ", "");
+        return changedComment != null && changedComment.length() > 0 && changedComment.length() <= 200;
+    }
+
+}

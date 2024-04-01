@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document List</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Document List</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>이름</th>
+            <th>주민등록등본</th>
+            <th>가족관계증명서</th>
+            <th>출생신고서</th>
+            <th>사망신고서</th>
+            <th>발급목록</th>
+            <th>삭제</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="document : ${documentList}">
+            <td th:text="${document.name}"></td>
+            <td>
+                <a th:href="@{'/residenceCertificate/' + ${document.residentSerialNumber}}"
+                   th:text="${document.residenceCertificate}"></a>
+            </td>
+            <td>
+                <a th:href="@{'/familyRelationshipCertificate/' + ${document.residentSerialNumber}}"
+                   th:text="${document.familyRelationCertificate}"></a>
+            </td>
+            <td>
+                <a th:href="@{'/birthCertificate/' + ${document.residentSerialNumber}}"
+                   th:text="${document.birthCertificate}"></a>
+            </td>
+            <td>
+                <a th:href="@{'/deathCertificate/' + ${document.residentSerialNumber}}"
+                   th:text="${document.deathCertificate}"></a>
+            </td>
+            <td>
+                <a th:href="@{'/issueList/' + ${document.residentSerialNumber}}" th:text="발급목록"></a>
+            </td>
+            <td>
+                <form th:action="@{'/deleteDocument/' + ${document.residentSerialNumber}}" th:method="post">
+                    <button type="submit">삭제</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul class="pagination">
+        <li class="page-item" th:each="page : ${#numbers.sequence(1, totalPages)}">
+            <a class="page-link" th:href="@{'/index/' + ${page}}" th:classappend="${page == currentPage} ? 'active'">
+                <span th:text="${page}"></span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+POST http://localhost:8080/departments
+Content-Type: application/json
+X-USER-ID:nhnacademy
+
+{
+  "id" : "CS0001",
+  "name" : "고객서비스1팀"
+}
+
+###
+GET http://localhost:8080/departments/CS0001
+X-USER-ID:nhnacademy
+
+###
+PUT http://localhost:8080/departments/CS0001
+Content-Type: application/json
+X-USER-ID:nhnacademy
+
+{
+  "name" : "CS1팀"
+}
+
+###
+DELETE http://localhost:8080/departments/CS0001
+X-USER-ID:nhnacademy
+
+###
+GET http://localhost:8080/department-members?departmentIds=L1001
+Accept:application/json
+X-USER-ID:nhnacademy
+
+###
+GET http://localhost:8080/department-members
+Accept:application/json
+X-USER-ID:nhnacademy
+
+###
+GET http://localhost:8080/department-members?departmentIds=
+Accept:application/json
+X-USER-ID:nhnacademy
+
+###
+GET http://localhost:8080/department-members?departmentIds=L1001
+Accept:application/json
+X-USER-ID:marco
+
+###
+GET http://localhost:8080/department-members?departmentIds=L1001
+Accept:application/json
+X-USER-ID:
+
+###
+GET http://localhost:8080/department-members?departmentIds=L1001
+Accept:application/json
+
+###
+GET http://localhost:8080/department-members?departmentIds=L1001
+Accept:application/csv
+X-USER-ID:nhnacademy

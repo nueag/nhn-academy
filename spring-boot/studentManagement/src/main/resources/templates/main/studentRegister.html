@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <title>등록 페이지</title>
+</head>
+<body>
+<form method="post" th:action="@{'/student/register'}">
+    <label th:text="#{student.name}"></label>
+    <input type="text" name="name"  /><br />
+
+    <label th:text="#{student.email}"></label>
+    <input type="text" name="email" /><br />
+
+    <label th:text="#{student.score}"></label>
+    <input type="text" name="score"  /><br />
+
+    <label th:text="#{student.comment}"></label>
+    <textarea name="comment" rows="10" cols="80"></textarea><br />
+
+    <br />
+    <input type="submit" />
+</form>
+</body>
+</html>

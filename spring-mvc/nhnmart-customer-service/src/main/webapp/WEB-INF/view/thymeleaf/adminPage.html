@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS 관리자 페이지</title>
+</head>
+<body>
+<h2>CS 관리자 페이지</h2>
+<p>
+    <a th:href="@{/logout}">
+        <button style="float: right; margin-right: 10px;">로그아웃</button>
+    </a>
+</p>
+<ul>
+    <li th:each="inquiry : ${inquiries}">
+        <a th:href="@{'/admin/inquiry/detail/' + ${inquiry.customerId} + '/' + ${inquiry.inquiryId}}">
+            <p>Title: <span th:text="${inquiry.title}"></span></p>
+        </a>
+        <p>Category: <span th:text="${inquiry.category}"></span></p>
+        <p>Created Date: <span th:text="${inquiry.postDate}"></span></p>
+        <hr>
+    </li>
+</ul>
+</body>
+</html>

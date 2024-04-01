@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사망신고서</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, h3 {
+            color: #007bff;
+        }
+
+        table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <h2 class="text-center">사망신고서</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <td colspan="4" class="text-center">
+                <p>신고일: <span th:text="${deathCertificate.certificateIssueDate}"></span></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center">성명</td>
+            <td class="text-center">성별</td>
+            <td class="text-center">사망일시</td>
+            <td class="text-center">사망장소</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span th:text="${deathCertificate.birthDeathInfoDto.getName}"></span></td>
+            <td class="text-center"><span th:text="${deathCertificate.birthDeathInfoDto.getGenderCode}"></span></td>
+            <td class="text-center"><span th:text="${deathCertificate.birthDeathInfoDto.getDeathDate}"></span></td>
+            <td class="text-center"><span th:text="${deathCertificate.birthDeathInfoDto.getDeathPlaceCode}"></span></td>
+        </tr>
+    </table>
+
+    <h3 class="text-center mt-4">신고인 정보</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th class="text-center">신고인 성명</th>
+            <th class="text-center">주민번호</th>
+            <th class="text-center">자격</th>
+            <th class="text-center">이메일</th>
+            <th class="text-center">전화번호</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="text-center"><span th:text="${deathCertificate.complainantDto.name}"></span></td>
+            <td class="text-center"><span
+                    th:text="${deathCertificate.complainantDto.residentRegistrationNumber}"></span></td>
+            <td class="text-center"><span
+                    th:text="${deathCertificate.complainantDto.birthReportQualificationsCode}"></span></td>
+            <td class="text-center"><span th:text="${deathCertificate.complainantDto.emailAddress}"></span></td>
+            <td class="text-center"><span th:text="${deathCertificate.complainantDto.phoneNumber}"></span></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+
+r	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ïŒ˜şÿÿÿÿ8çˆÍÅÑ1
+t	java:S116)"XRename this field "register_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡º”Ø8Üì÷®Ñ1
+b	java:S107-"AConstructor has 8 parameters, which is greater than 7 authorized.(Á½Ù«ÿÿÿÿÿ8ëˆÍÅÑ1
+R
+java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ8âÍÅÑ1

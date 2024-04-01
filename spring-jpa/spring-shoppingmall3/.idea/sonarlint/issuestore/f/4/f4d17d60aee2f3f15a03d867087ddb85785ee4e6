@@ -1,0 +1,11 @@
+
+S
+java:S5838*"1Use assertThat(actual).hasSize(expected) instead.(ëøøÿÿÿÿ8‹ÔÔçÑ1
+S
+java:S58380"1Use assertThat(actual).hasSize(expected) instead.(ÛœÄ©ûÿÿÿÿ8‹ÔÔçÑ1
+N
+java:S58387"1Use assertThat(actual).hasSize(expected) instead.(Ù š¬8‹ÔÔçÑ1
+7
+java:S5838Y"Use isZero() instead.(«ã­ûÿÿÿÿ8ŒÔÔçÑ1
+N
+java:S5838^"1Use assertThat(actual).hasSize(expected) instead.(µìëŒ8ŒÔÔçÑ1

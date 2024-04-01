@@ -1,0 +1,15 @@
+POST http://localhost:8080/household HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "householdSerialNumber": 2,
+  "householdResidentSerialNumber": 5,
+  "householdCompositionDate": "2024-01-01T12:00:00",
+  "householdCompositionReasonCode": "REASON1",
+  "currentHouseMovementAddress": "123 Main St"
+}
+###
+
+DELETE http://localhost:8080/household/2 HTTP/1.1
+Host: localhost:8080

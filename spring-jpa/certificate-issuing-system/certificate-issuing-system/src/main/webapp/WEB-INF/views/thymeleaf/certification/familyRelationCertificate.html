@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주민등록등본</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <h2 class="text-center">가족관계증명서</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <th colspan="2" class="text-center"><h4>가족관계증명서</h4></th>
+        </tr>
+        <tr>
+            <td colspan="2" class="text-center">
+                <p>발급일: <span th:text="${familyRelationCertificate.certificateIssueDate}"></span></p>
+                <p>증명서확인번호: <span th:text="${familyRelationCertificate.certificateConfirmationNumber}"></span></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="text-center">
+                <p> 등록기준지: <span
+                        th:text="${familyRelationCertificate.personalInfoDto.getRegistrationBaseAddress}"></span></p>
+            </td>
+        </tr>
+    </table>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>구분</th>
+            <th>성명</th>
+            <th>출생연월일</th>
+            <th>주민등록번호</th>
+            <th>성별</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>본인</td>
+            <td th:text="${familyRelationCertificate.personalInfoDto.getName}"></td>
+            <td th:text="${familyRelationCertificate.personalInfoDto.getBirthDate}"></td>
+            <td th:text="${familyRelationCertificate.personalInfoDto.getResidentRegistrationNumber}"></td>
+            <td th:text="${familyRelationCertificate.personalInfoDto.getGenderCode}"></td>
+        </tr>
+        <tr th:each="composition : ${familyRelationCertificate.familyRelationshipList}">
+            <td th:text="${composition.familyRelationshipCode}"></td>
+            <td th:text="${composition.name}"></td>
+            <td th:text="${composition.birthDate}"></td>
+            <td th:text="${composition.getResidentRegistrationNumber}"></td>
+            <td th:text="${composition.getGenderCode}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

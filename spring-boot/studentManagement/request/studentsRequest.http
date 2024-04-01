@@ -1,0 +1,26 @@
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "score": 90,
+  "comment": "Good student"
+}
+
+###
+
+GET http://localhost:8080/students/1
+
+###
+
+PUT http://localhost:8080/students/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Updated Name",
+  "email": "updated.email@example.com",
+  "score": 95,
+  "comment": "Updated Comment"
+}

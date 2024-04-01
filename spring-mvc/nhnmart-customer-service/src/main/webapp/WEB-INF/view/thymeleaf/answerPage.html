@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<h2>고객 문의 답변하기</h2>
+
+<p><strong>제목:</strong> <span th:text="${inquiry.title}"></span></p>
+<p><strong>분류:</strong> <span th:text="${inquiry.category}"></span></p>
+<p><strong>본문:</strong> <span th:text="${inquiry.content}"></span></p>
+
+<p><strong>첨부 파일 목록:</strong></p>
+<ul>
+    <li th:each="file : ${inquiry.files}">
+        <a th:href="@{'/uploads/' + ${file.getName}}" target="_blank">
+            <img th:src="@{'/uploads/' + ${file.getName}}" alt="File Image"
+                 style="max-width: 200px; max-height: 200px; margin-bottom: 10px;">
+        </a>
+    </li>
+</ul>
+
+<form th:action="@{'/admin/inquiry/answer/' + ${inquiry.customerId} + '/' +  ${inquiry.inquiryId}}" method="post">
+    <p><strong>답변:</strong></p>
+    <textarea name="answerText" rows="5" cols="50" maxlength="40000" required></textarea>
+
+    <button type="submit">확인</button>
+    <a th:href="@{/admin/inquiry/main}">
+        <button type="button">취소</button>
+    </a>
+</form>
+</body>
+</html>

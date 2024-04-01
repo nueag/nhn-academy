@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주민등록등본</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <h2 class="text-center">주민등록등본</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <th colspan="2" class="text-center"><h4>주민등록등본</h4></th>
+        </tr>
+        <tr>
+            <td colspan="2" class="text-center">
+                <p>발급일: <span th:text="${residentCertificate.certificateIssueDate}"></span></p>
+                <p>증명서확인번호: <span th:text="${residentCertificate.certificateConfirmationNumber}"></span></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="text-center">
+                <p> 세대주 성명: <span th:text="${residentCertificate.name}"></span></p>
+            </td>
+            <td colspan="2" class="text-center">
+                <p> 세대 구성 사유 및 일자: <span th:text="${residentCertificate.householdCompositionChangeReasonCode}"></span>
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p></p>
+            </td>
+            <td>
+                <p> 주소 </p>
+            </td>
+            <td>
+                <p> 신고일 </p>
+            </td>
+        </tr>
+
+        <tr th:each="address : ${residentCertificate.addressList}">
+            <td>전주소</td>
+            <td th:text="${address.houseMovementAddress}"></td>
+            <td th:text="${address.houseMovementReportDate}"></td>
+        </tr>
+    </table>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>세대주 관계</th>
+            <th>성명</th>
+            <th>주민등록번호</th>
+            <th>신고일</th>
+            <th>변동사유</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="composition : ${residentCertificate.compositionInfoDtoList}">
+            <td th:text="${composition.householdRelationshipCode}"></td>
+            <td th:text="${composition.name}"></td>
+            <td th:text="${composition.residentRegistrationNumber}"></td>
+            <td th:text="${composition.reportDate}"></td>
+            <td th:text="${composition.householdCompositionChangeReasonCode}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+r
+java:S1104#"UMake formatter a static final constant or non-public and provide accessors if needed.(³Ôº£8ÅÓ‡ˆÐ1
+L
+java:S1444#"/Make this "public static formatter" field final(³Ôº£8ÅÓ‡ˆÐ1
+x
+java:S3008""[Rename this field "INQUIRY_ID_COUNT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ÏžÏ8ÉÓ‡ˆÐ1
+S
+java:S26961"6Make the enclosing method "static" or remove this set.(Œ´‰Æ8ËÓ‡ˆÐ1
+V
+java:S1128"4Remove this unused import 'java.time.LocalTime.now'.(µ´Á€ùÿÿÿÿ8ªë‡ˆÐ1
+M
+java:S1128	"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ªë‡ˆÐ1
+H
+java:S1128
+"+Remove this unused import 'java.util.Date'.(¸…¼ü8ªë‡ˆÐ1
+K
+java:S1128".Remove this unused import 'java.util.Objects'.(¼¸õ›8‘Ð©ˆÐ1

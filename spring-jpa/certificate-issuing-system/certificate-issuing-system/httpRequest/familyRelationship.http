@@ -1,0 +1,24 @@
+POST http://localhost:8080/residents/1/relationship HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "familySerialNumber": 200,
+  "familyRelationshipCode": "배우자"
+}
+
+###
+
+PUT http://localhost:8080/residents/123/relationship/123 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "mother"
+}
+
+###
+
+DELETE http://localhost:8080/residents/123/relationship/123 HTTP/1.1
+Host: localhost:8080
+

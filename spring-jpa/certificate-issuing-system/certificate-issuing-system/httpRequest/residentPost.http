@@ -1,0 +1,35 @@
+# POST request to register a resident
+POST http://localhost:8080/residents
+Content-Type: application/json
+
+# Request body
+{
+  "residentSerialNumber": 123,
+  "name": "이가은",
+  "residentRegistrationNumber": "123456-1234567",
+  "genderCode": "여",
+  "birthDate": "2001-09-27",
+  "birthPlaceCode": "병원",
+  "registrationBaseAddress": "광주시 북구 신안동 419-1",
+  "deathDate": null,
+  "deathPlaceCode": null,
+  "deathPlaceAddress": null
+}
+###
+
+PUT http://localhost:8080/residents/123
+Content-Type: application/json
+
+# Request body
+{
+  "residentSerialNumber": 123,
+  "name": "홍길동",
+  "residentRegistrationNumber": "123456-1234567",
+  "genderCode": "여",
+  "birthDate": "2001-09-27",
+  "birthPlaceCode": "병원",
+  "registrationBaseAddress": "광주시 북구 신안동 419-1",
+  "deathDate": null,
+  "deathPlaceCode": null,
+  "deathPlaceAddress": null
+}

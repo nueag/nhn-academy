@@ -1,0 +1,55 @@
+[ com.nhnacademy.edu.springframework.repository.JsonDataParser ] [ parse ] [ 246 ]ms
+
+[ com.nhnacademy.edu.springframework.repository.BasicRateTableRepository ] [ csvParse ] [ 290 ]ms
+
+[ com.nhnacademy.edu.springframework.service.BasicDataLoadService ] [ load ] [ 294 ]ms
+
+[ com.nhnacademy.edu.springframework.repository.BasicRateTableRepository ] [ billCalculte ] [ 7 ]ms
+
+[ com.nhnacademy.edu.springframework.service.BasicWaterBillService ] [ fareCalculate ] [ 8 ]ms
+
+[ com.nhnacademy.edu.springframework.report.BasicResultReport ] [ report ] [ 24 ]ms
+
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2f62ea70, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@24ba9639, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@38aa816f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@53f6fd09, org.springframework.test.context.event.EventPublishingTestExecutionListener@6bffbc6d]
+[ com.nhnacademy.edu.springframework.repository.JsonDataParser ] [ parse ] [ 123 ]ms
+
+[ com.nhnacademy.edu.springframework.repository.BasicRateTableRepository ] [ csvParse ] [ 138 ]ms
+
+Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'basicRateTableRepository' defined in file [/Users/kaeun/Lesson/spring/spring-core/springframework-project2/target/classes/com/nhnacademy/edu/springframework/repository/BasicRateTableRepository.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.nhnacademy.edu.springframework.repository.BasicRateTableRepository]: Constructor threw exception; nested exception is java.lang.NullPointerException
+[ com.nhnacademy.edu.springframework.repository.JsonDataParser ] [ parse ] [ 246 ]ms
+
+[ com.nhnacademy.edu.springframework.repository.BasicRateTableRepository ] [ csvParse ] [ 283 ]ms
+
+[ com.nhnacademy.edu.springframework.service.BasicDataLoadService ] [ load ] [ 287 ]ms
+
+[ com.nhnacademy.edu.springframework.repository.BasicRateTableRepository ] [ billCalculte ] [ 6 ]ms
+
+[ com.nhnacademy.edu.springframework.service.BasicWaterBillService ] [ fareCalculate ] [ 9 ]ms
+
+[ com.nhnacademy.edu.springframework.report.BasicResultReport ] [ report ] [ 23 ]ms
+
+[ com.nhnacademy.edu.springframework.repository.CsvDataParser ] [ parse ] [ 10 ]ms
+
+[ com.nhnacademy.edu.springframework.repository.BasicRateTableRepository ] [ csvParse ] [ 40 ]ms
+
+[ com.nhnacademy.edu.springframework.service.BasicDataLoadService ] [ load ] [ 44 ]ms
+
+[ com.nhnacademy.edu.springframework.repository.BasicRateTableRepository ] [ billCalculte ] [ 5 ]ms
+
+[ com.nhnacademy.edu.springframework.service.BasicWaterBillService ] [ fareCalculate ] [ 5 ]ms
+
+[ com.nhnacademy.edu.springframework.report.BasicResultReport ] [ report ] [ 22 ]ms
+
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2f62ea70, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@24ba9639, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@38aa816f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@53f6fd09, org.springframework.test.context.event.EventPublishingTestExecutionListener@6bffbc6d]
+[ com.nhnacademy.edu.springframework.repository.CsvDataParser ] [ parse ] [ 8 ]ms
+
+[ com.nhnacademy.edu.springframework.repository.BasicRateTableRepository ] [ csvParse ] [ 30 ]ms
+
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2f62ea70, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@24ba9639, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@38aa816f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@53f6fd09, org.springframework.test.context.event.EventPublishingTestExecutionListener@6bffbc6d]
+[ com.nhnacademy.edu.springframework.repository.CsvDataParser ] [ parse ] [ 2 ]ms
+
+[ com.nhnacademy.edu.springframework.repository.BasicRateTableRepository ] [ csvParse ] [ 15 ]ms
+

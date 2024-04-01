@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>출생신고서</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <h2 class="text-center">출생신고서</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <td colspan="4" class="text-center">
+                <p>신고일: <span th:text="${birthCertificate.certificateIssueDate}"></span></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="text-center">
+                <p> 등록기준지: <span th:text="${birthCertificate.birthDeathInfoDto.getDeathPlaceAddress}"></span></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center">성명</td>
+            <td class="text-center">성별</td>
+            <td class="text-center">출생일시</td>
+            <td class="text-center">출생장소</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span th:text="${birthCertificate.birthDeathInfoDto.getName}"></span></td>
+            <td class="text-center"><span th:text="${birthCertificate.birthDeathInfoDto.getGenderCode}"></span></td>
+            <td class="text-center"><span th:text="${birthCertificate.birthDeathInfoDto.getBirthDate}"></span></td>
+            <td class="text-center"><span th:text="${birthCertificate.birthDeathInfoDto.getBirthPlaceCode}"></span></td>
+        </tr>
+    </table>
+
+    <table class="table">
+        <tr>
+            <td class="text-center">부/모 여부</td>
+            <td class="text-center">성명</td>
+            <td class="text-center">주민번호</td>
+        </tr>
+        <tr th:each="parent : ${birthCertificate.parentInfoDtoList}">
+            <td th:text="${parent.familyRelationshipCode}"></td>
+            <td th:text="${parent.name}"></td>
+            <td th:text="${parent.residentRegistrationNumber}"></td>
+        </tr>
+    </table>
+
+    <table class="table">
+        <tr>
+            <td class="text-center">신고인 성명</td>
+            <td class="text-center">주민번호</td>
+            <td class="text-center">자격</td>
+            <td class="text-center">이메일</td>
+            <td class="text-center">전화번호</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span th:text="${birthCertificate.complainantDto.name}"></span></td>
+            <td class="text-center"><span
+                    th:text="${birthCertificate.complainantDto.residentRegistrationNumber}"></span></td>
+            <td class="text-center"><span
+                    th:text="${birthCertificate.complainantDto.birthReportQualificationsCode}"></span></td>
+            <td class="text-center"><span th:text="${birthCertificate.complainantDto.emailAddress}"></span></td>
+            <td class="text-center"><span th:text="${birthCertificate.complainantDto.phoneNumber}"></span></td>
+        </tr>
+    </table>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

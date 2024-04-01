@@ -1,0 +1,13 @@
+
+S
+java:S1128"1Remove this unused import 'java.io.Serializable'.(èãîÂÿÿÿÿÿ8ì¦ŒÄÑ1
+R
+java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èýÿÿÿÿ8ì¦ŒÄÑ1
+[
+java:S1128"9Remove this unused import 'javax.persistence.Embeddable'.(‡¡Ý¬ûÿÿÿÿ8ì¦ŒÄÑ1
+[
+java:S1128"9Remove this unused import 'javax.persistence.EmbeddedId'.(Ñ£ù¢üÿÿÿÿ8ì¦ŒÄÑ1
+c
+java:S1128"ARemove this unused import 'javax.validation.constraints.NotNull'.(áç¥ãüÿÿÿÿ8ì¦ŒÄÑ1
+R
+java:S1128"5Remove this unused import 'lombok.EqualsAndHashCode'.(Ìà‰ò8ì¦ŒÄÑ1

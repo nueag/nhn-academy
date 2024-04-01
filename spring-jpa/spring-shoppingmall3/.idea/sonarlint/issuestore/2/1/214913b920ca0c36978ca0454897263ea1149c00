@@ -1,0 +1,9 @@
+
+S
+java:S1128"1Remove this unused import 'java.io.Serializable'.(èãîÂÿÿÿÿÿ8—ŠÖëÑ1
+R
+java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ8—ŠÖëÑ1
+[
+java:S1128"9Remove this unused import 'javax.persistence.Embeddable'.(‡¡İ¬ûÿÿÿÿ8—ŠÖëÑ1
+[
+java:S1128	"9Remove this unused import 'javax.persistence.EmbeddedId'.(Ñ£ù¢üÿÿÿÿ8—ŠÖëÑ1

@@ -1,0 +1,8 @@
+
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ø©êÑ8öú¡Õ1
+o
+java:S1128"MRemove this unused import 'com.nhnacademy.exam.requestDto.DepartmentRequest'.(Ã‰²‚üÿÿÿÿ8û¡Õ1
+x
+java:S1128"VRemove this unused import 'com.nhnacademy.exam.service.Impl.DefaultDepartmentService'.(˜Î¬ıÿÿÿÿÿ8û¡Õ1
+v
+java:S1128"TRemove this unused import 'com.nhnacademy.exam.service.Impl.DefaultEmployeeService'.(şÏÅÑşÿÿÿÿ8û¡Õ1

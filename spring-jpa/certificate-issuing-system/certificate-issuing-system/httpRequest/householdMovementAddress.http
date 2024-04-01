@@ -1,0 +1,26 @@
+POST http://localhost:8080/household/2/movement HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+  "houseMovementReportDate": "20240101",
+  "houseMovementAddress": "456 New St",
+  "lastAddressYn": "N"
+}
+
+###
+
+PUT http://localhost:8080/household/2/movement/2024-01-01 HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+  "houseMovementReportDate": "20240101",
+  "houseMovementAddress": "789 Updated St",
+  "lastAddressYn": "N"
+}
+
+###
+
+DELETE http://localhost:8080/household/2/movement/2024-01-01 HTTP/1.1
+Host: localhost:8080

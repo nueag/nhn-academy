@@ -1,0 +1,19 @@
+
+b	java:S107"AConstructor has 8 parameters, which is greater than 7 authorized.(ÓÂ æúÿÿÿÿ8ó¸²ˆÎ1
+O
+java:S1068"-Remove this unused "traiffNum" private field.(œ…ÚÜıÿÿÿÿ8ôî¬ˆÎ1
+E
+java:S1068"(Remove this unused "city" private field.(“øÌà8ôî¬ˆÎ1
+F
+java:S1068"*Remove this unused "sector" private field.(•øY8ôî¬ˆÎ1
+K
+java:S1068")Remove this unused "level" private field.(ÂÎ÷øÿÿÿÿ8ôî¬ˆÎ1
+M
+java:S1068"0Remove this unused "startSection" private field.(ÊºĞ»8ò¢®ˆÎ1
+J
+java:S1068	".Remove this unused "endSection" private field.(Ş«D8ƒ¾®ˆÎ1
+O
+java:S1068
+"-Remove this unused "unitPrice" private field.(ıÈò§úÿÿÿÿ8ôî¬ˆÎ1
+O
+java:S1068"-Remove this unused "billTotal" private field.(Û‡™Şşÿÿÿÿ8ôî¬ˆÎ1

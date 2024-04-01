@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의 상세 내역</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            width: 400px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+            text-align: center;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        button {
+            padding: 8px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>문의 상세 내역</h2>
+
+    <p><strong>제목:</strong> <span th:text="${inquiry.title}"></span></p>
+    <p><strong>분류:</strong> <span th:text="${inquiry.category}"></span></p>
+    <p><strong>본문:</strong> <span th:text="${inquiry.content}"></span></p>
+    <p><strong>작성일시:</strong> <span th:text="${inquiry.postDate}"></span></p>
+
+    <p><strong>첨부 파일 목록:</strong></p>
+    <ul>
+        <li th:each="file : ${inquiry.files}">
+            <img th:src="@{'/uploads/' + ${file.getName}}" alt="File Image">
+        </li>
+    </ul>
+
+    <p th:if="${inquiry.isAnswerCompleted}"><strong>답변 상태:</strong> 완료</p>
+    <p th:unless="${inquiry.isAnswerCompleted}"><strong>답변 상태:</strong> 미완료</p>
+
+    <div th:unless="${inquiry.isAnswerCompleted}">
+        <th:block th:if="${user.isAdmin}">
+            <a th:href="@{'/admin/inquiry/answer/' + ${inquiry.customerId} + '/' +  ${inquiry.inquiryId}}">
+                <button>답변하기</button>
+            </a>
+        </th:block>
+    </div>
+
+    <div th:if="${inquiry.isAnswerCompleted}">
+        <p><strong>답변 내용:</strong> <span th:text="${inquiry.answer.content}"></span></p>
+        <p><strong>답변 일시:</strong> <span th:text="${inquiry.answer.answerDate}"></span></p>
+        <p><strong>CS 담당자:</strong> <span th:text="${inquiry.answer.csAgent}"></span></p>
+    </div>
+
+    <a th:href="@{'/login/'+${user.userId}}">이전 페이지로 돌아가기</a>
+</div>
+</body>
+</html>

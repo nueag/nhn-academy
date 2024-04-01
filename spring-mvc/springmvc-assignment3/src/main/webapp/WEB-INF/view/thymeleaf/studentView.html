@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <title th:text="#{student.view.title}"></title>
+</head>
+<body>
+<h2 th:text="#{student.name}+' : '+ ${student.name}"/>
+<h2 th:text="#{student.email}+' : '+ ${student.email}"/>
+
+<th:block th:if="${not hideScore}">
+    <p th:text="#{student.score.hidden}"></p>
+    <p th:text="#{student.comment.hidden}"></p>
+</th:block>
+
+<th:block th:if="${hideScore}">
+    <h2 th:text="#{student.score}+' : '+ ${student.score}"/>
+    <h2 th:text="#{student.comment}+' : '+ ${student.comment}"/>
+</th:block>
+
+<br />
+<a th:href="@{'/student/' + ${student.id} + '/modify'}" th:text="#{student.view.modify}"></a><br />
+
+</body>
+</html>
